@@ -11,16 +11,11 @@ h1 {
     padding-top: 20px;
 }
 
-/* textarea { */
-    /* height: 40vh; */
-    /* width: 80%; */
-/* } */
-
 .entry {
     border: 1px solid black;
     border-radius: 5px;
-    padding: 0px 10px;
     margin: 10px 0px;
+    padding: 0px 10px;
     width: 80vw;
 }
 
@@ -29,17 +24,17 @@ h1 {
 }
 
 .search {
-    width: 100%;
+    border-radius: 5px;
     font-size: 15px;
     line-height: 30px;
-    border-radius: 5px;
+    width: 100%;
 }
 
 .sidebar {
-    height: 100vh;
-    padding: 20px;
     background-color: gainsboro;
     font-size: 18px;
+    height: 100vh;
+    padding: 20px;
 }
 
 .sidebar h2 {
