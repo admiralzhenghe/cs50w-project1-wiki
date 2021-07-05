@@ -56,9 +56,7 @@ def new(request):
                 util.save_entry(title, content)
                 return redirect(f"/wiki/{title}")
     else: #if request.method == "GET"
-        return render(request, "encyclopedia/new.html", {
-            "entry": Form(),
-        })
+        return render(request, "encyclopedia/new.html", { "entry": Form() })
 
 def edit(request, title):
     entry = util.get_entry(title)
@@ -71,8 +69,8 @@ def edit(request, title):
             content = new.cleaned_data["content"]
             if not title.upper() in entries:
                 return render(request, "encyclopedia/edit.html", {
-                    "entry": Form(initial={'title': original, 'content': entry}),
                     "title": original,
+                    "entry": Form(initial={'title': original, 'content': entry}),
                     "null": f"The entry {title} does not exist!"
                 })
             else:
@@ -81,8 +79,8 @@ def edit(request, title):
     elif request.method == "GET":
         if entry:    
             return render(request, "encyclopedia/edit.html", {
-                "entry": Form(initial={'title': title, 'content': entry}),
-                "title": title
+                "title": title,
+                "entry": Form(initial={'title': title, 'content': entry})
             })
 
 def random(request):
