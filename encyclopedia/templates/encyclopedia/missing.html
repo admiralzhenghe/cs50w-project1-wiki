@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block body %}
+    <h1>Search Results</h1>
+    The requested page for "{{ title }}" was not found.
+    <br><br>
+    <a href="/new">
+        <input type="button" value="Create New Page">
+    </a>
+{% endblock %}

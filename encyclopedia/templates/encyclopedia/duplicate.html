@@ -1,0 +1,21 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Duplicate entry
+{% endblock %}
+
+{% block body %}
+
+    <h1>Entry already exists!</h1>
+    <form class="new" method="POST" >
+        {% csrf_token %}
+        {{ entry.title }}
+        <div></div>
+        <label>Content:</label>
+        <div></div>
+        {{ entry.content }}
+        <div></div>
+        <input type="submit">
+    </form>
+    
+{% endblock %}

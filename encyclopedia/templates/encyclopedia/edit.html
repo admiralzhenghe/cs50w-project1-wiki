@@ -1,0 +1,27 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Edit entry
+{% endblock %}
+
+{% block body %}
+
+    {% if null %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{ null }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endif %}
+    <h1>Edit entry for {{ title }}</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ entry.title }}
+        <div></div>
+        {{ entry.content }}
+        <div></div>
+        <input type="submit">
+    </form>
+
+{% endblock %}
